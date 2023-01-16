@@ -1,0 +1,12 @@
+<div class="recharge_update" id="recharge_update">
+    <h3>Welcome Admin! Enter details to Update a Prepaid recharge</h3>
+    <form (ngSubmit) = "onSubmit()">
+                <div><input [(ngModel)]="recharge.email" class="email" placeholder="Email"></div>
+                <div><input [(ngModel)]="recharge.rechargeId" name="rechargeId" type="text" placeholder="Enter recharge ID"></div>
+                <div><input [(ngModel)]="recharge.rechargePlan" name="rechargePlan" type="text" placeholder="Enter recharge Plan"></div>
+                <div><input [(ngModel)]="recharge.rechargePrice" name="rechargePrice" type="text" placeholder="Enter the price"></div>
+                <div><input [(ngModel)]="recharge.rechargetype" name="rechargeType" type="text" placeholder="Enter recharge type"></div>
+        <br><br>
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>

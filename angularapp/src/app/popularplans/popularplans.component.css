@@ -1,0 +1,175 @@
+.bg{
+    background:url("bg_img_plans.jpg");     
+  min-height : 100%;
+  min-width : 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+ position:absolute;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  opacity: 0.5;
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+    border-radius: 50px;
+}
+.btn:hover{
+    background:black;
+    color:#fff;
+}
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+}
+.header .logo{
+    text-align: left;
+    font-size: 45px;
+    color: red;
+    text-decoration: none;
+}
+.header .navbar a{
+    font-size: 25px;
+    margin:0 2rem;
+    text-align: center;
+    color:black;
+    text-decoration: none;
+
+}
+
+.header .navbar a:hover{
+    color: blue;
+}
+#active{
+    color:orange;
+    font-size: 30px;
+}
+.container {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.container .popularPlansGrid {
+    display: block;
+    padding: 20px;
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    border-radius: 3px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.container .popularPlansGrid {
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    border-radius: 50px;
+}
+
+
+
+
+.heading {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: lighter;
+    padding: 10px;
+    font-size: 3em;
+}
+
+.service__price {
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.features__list {
+    list-style: none;
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.features__list li {
+    color: #fff;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-size: 0.9em;
+    height: 30px;
+    line-height: 30px;
+}
+
+a .recharge__button {
+    border: none;
+    display: block;
+    width: 130px;
+    height: 40px;
+    margin: 5px auto;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+    background: #fff;
+    
+}
+
+a .recharge__button:hover {
+    width:140px;
+    cursor: pointer;
+}

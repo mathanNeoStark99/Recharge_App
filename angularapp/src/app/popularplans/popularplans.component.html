@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="popularplans.component.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="header">
+            
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <button (click)="goToPage('popularplans')" class="userPlans" id="active">Popular Plans</button>
+                <button (click)="goToPage('addons')" class="userAddons">Addons</button>
+                <button (click)="goToPage('notifications')" class="notifications">Notifications</button>
+                <button (click)="goToPage('login')" class="login">Logout</button>
+            </nav>
+        </div>   
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="popularPlansGrid" *ngFor = "let plan of plans" >  
+                <h1 class="heading">{{plan.planName}}</h1>
+                <h2 class="service__price">Rs.{{plan.planPrice}}</h2>
+                <ul class="features__list">
+                    <li>Plan Type:{{plan.planType}}</li>
+                    <li>Validity:{{plan.planValidity}}</li>
+                    <li>Details:{{plan.planDetails}}</li>
+                </ul>
+                <h4><a><button class="recharge__button" (ngSubmit)="OnSubmit()" (click)="rechargeconfirmation(plan.planId)">Recharge</button></a></h4>
+            </div>   
+        </div>
+</body>
+</html>

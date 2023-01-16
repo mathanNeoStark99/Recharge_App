@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<html >
+    <body>
+        <div class="bg"></div>
+        <div class="header">
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <button (click)="goToPage('popularplans')" class="userPlans" id="active">Popular Plans</button>
+                <button (click)="goToPage('addons')" class="userAddons">Addons</button>
+                <button (click)="goToPage('notifications')" class="notifications">Notifications</button>
+                <button (click)="goToPage('login')" class="login">Logout</button>
+            </nav>
+        </div> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    <div class="container">
+		    <br>
+            <br>
+            <h1>Congratulations!!!</h1>
+		    <h3>Recharge for your number {{this.num}} is Sucessful</h3>
+            <h3>You will receive a confirmation message in few minutes.</h3>
+    </div>
+</body>
+</html>

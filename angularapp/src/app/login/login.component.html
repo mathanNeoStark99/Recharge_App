@@ -1,0 +1,37 @@
+<script>
+  $(document).ready(function() {
+      $('#identicalForm').bootstrapValidator();
+  });
+  </script>
+
+
+<div class="bg">
+
+</div>
+
+<div class="sidenav col-md-6 offset-md-3">
+  <h3 class="main-head text-center font-weight-bolder text-white"> Login </h3>
+  <form  (ngSubmit)="login()" #LoginForm="ngForm">
+  
+      
+  
+    <small class="text-danger">{{msg}}</small>
+    <div class="form-group font-weight-bold text-white">
+      <label> Email Id</label>
+   
+      <input type="text" class ="form-control" id = "emailId" [(ngModel)] = "user.emailId" name = "emailId" placeholder="Enter EmailId"  >
+  </div>
+  
+  <div class="form-group font-weight-bold text-white">
+      <label> Password</label>
+      <input type="password" class ="form-control" id = "password" [(ngModel)] = "user.password" name = "password" placeholder="Enter the password"  > 
+          
+  </div>
+      
+      <div class="form-group">
+      
+      <button type="submit" class="btn btn-success" [disabled]="!LoginForm.form.valid">Submit</button>
+      <p class="text-white">I already have an account. <button (click)="goToSignup()">SignUp</button></p>
+      </div>
+  </form>
+  </div>

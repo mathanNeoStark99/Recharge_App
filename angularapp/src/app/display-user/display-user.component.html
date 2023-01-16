@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <ul>
+                <li><a>AirNet</a></li>
+                <li><button id="adminPrepaid" (click)="goToPage('admin/prepaidplans')">Prepaid plans</button></li>
+                <li><button id="adminPostpaid" (click)="goToPage('admin/postpaidplans')">Postpaid plans</button></li>
+                <li><button id="adminAddOns" (click)="goToPage('admin/addon')">AddOns</button></li>
+                <li><button id="adminDisplayUser" (click)="goToPage('displayuser')">DisplayUser</button></li>
+                <li><button id="displayRecharge" (click)="goToPage('displayrecharge')">DisplayRecharge</button></li>
+                <li style="float:right"><button (click)="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    
+<h2> User List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th> UserName</th>
+            <th> MobileNumber </th>
+            <th> Email Id</th>
+            <th> Password </th>
+            <th>UserRole</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of user" >
+            <td> {{ user.id }} </td>
+            <td> {{ user.username }} </td>
+            <td> {{ user.mobilenumber }} </td>
+            <td> {{ user.emailId }} </td>
+            <td> {{ user.password }} </td>
+            <td>{{ user.user_role }}</td>
+            
+            <td>
+                <button (click) = "edituser(user.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteuser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

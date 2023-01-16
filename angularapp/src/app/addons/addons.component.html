@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="addons.component.css">
+        <title>Addon Plans</title>
+        
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="header">
+            <a href="#" class="logo">AirNet </a>
+        
+            <nav class="navbar">
+                <button (click)="goToPage('popularplans')" class="userPlans" id="active">Popular Plans</button>
+                <button (click)="goToPage('addons')" class="userAddons">Addons</button>
+                <button (click)="goToPage('notifications')" class="notifications">Notifications</button>
+                <button (click)="goToPage('login')" class="login">Logout</button>
+            </nav>
+
+        </div>  
+        <br>
+        <br>
+        <br>
+        <div class="container">
+        <div class="AddonsGrid" *ngFor = "let addon of addons" >
+            
+            <h1 class="heading">{{addon.addonName}}</h1>
+            <h2 class="service__price">Rs.{{addon.addonPrice}}</h2>
+            <ul class="features__list">
+                <li>Details:{{addon.addonDetails}}</li>
+            </ul>
+            <h4><a><button class="recharge__button" (ngSubmit)="OnSubmit()" (click)="addon-rechargeconfirmation(addon.id)">Recharge</button></a></h4>
+        </div>   
+    </div>
+    </body>
+</html>
